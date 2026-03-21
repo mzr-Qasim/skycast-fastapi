@@ -11978,4 +11978,8 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+main.main-content h1, main.main-content .h1 {
+  background-color: red;
+  color: orange;
 }/*# sourceMappingURL=main.css.map */
