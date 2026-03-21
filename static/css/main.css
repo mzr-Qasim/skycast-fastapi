@@ -1,16 +1,16 @@
+
 section.main_hero_section figure{
     position: relative;
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
     z-index: 1;
 
 }
 
 
-section.main_hero_section figure img{
+section.main_hero_section figure video{
     position: absolute;
     top: 0;
     left: 0;
@@ -22,13 +22,34 @@ section.main_hero_section figure img{
 
 section.main_hero_section figure figcaption{
     z-index: 3;
+    width: 100%;
+
 }
 
 
-section.main_hero_section figure figcaption h1{
+
+
+
+.main-hero-heading {
+    font-size: clamp(2.8rem, 4vw, 8rem);
+    font-weight: bold;
+    padding-bottom: 2rem;
     color: white;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bolder;
+    letter-spacing: .25rem;
+
 }
 
+
+
+.main-hero-heading span.para {
+        padding-top: 1rem;
+        display: block;
+        font-size: 60%;
+        font-weight: lighter;
+
+}
 
 
 
@@ -41,7 +62,15 @@ section.main_hero_section figure::after{
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: .3;
+    opacity: .55;
     z-index: 2;
 
+}
+
+
+/* Section Get started */
+
+section.get_started{
+    height: 1700px;
+    color: white;
 }

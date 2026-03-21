@@ -7,6 +7,11 @@ ul {
     list-style-type: none;
 }
 
+a{
+    text-decoration: none;
+}
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -15,10 +20,134 @@ html {
 body{
     overflow: hidden;
     overflow-y: auto;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Poppins", sans-serif;
+    background-color: black;
 }
 
 
 .section-space{
     padding-bottom: 5rem;
 }
+
+.theme_para {
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    font-family: "Inter", sans-serif;
+    padding-bottom: 2rem;
+}
+
+
+.theme-button {
+    display: inline-block;
+    width: fit-content;
+    border-radius: 5px;
+    padding: .75rem 2rem;
+    font-weight: 500;
+    transition: all ease-in-out .3s;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+
+
+}
+
+.main_theme_button {
+    background-color: rgb(70, 36, 222);
+    color: white;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.main_theme_button::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: 0;
+        transition: all ease-in-out .3s;
+
+
+}
+.main_theme_button:hover::after {
+        opacity: .15;
+
+}
+
+   
+
+.section_heading{
+        font-size: clamp(2rem, 3vw, 4rem);
+        color: white;
+        font-weight: 500;
+        padding-bottom: 5rem;
+        text-transform: capitalize;
+        text-align: center;
+        font-family: "Orbitron", sans-serif;
+        letter-spacing: .1rem;
+
+
+
+}
+
+.theme-li li{
+    position: relative;
+    padding-left: 2rem;
+    font-size: clamp(1.4rem, 2vw, 1.6rem);
+    font-weight: 500;
+    margin-left: 1rem;
+    text-wrap: pretty;
+}
+
+.theme-li li:not(:last-child){
+    margin-bottom: 2rem;
+}
+
+.theme-li li::before{
+    position: absolute;
+    content: '';
+    background-color: rgb(70, 36, 222);
+    width: .7rem;
+    height: .7rem;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+
+
+
+.font-light{
+    font-weight: 200;
+}
+
+
+.theme-link{
+    position: relative;
+    display: inline-block;
+    padding-bottom: .5rem;
+        color: rgb(70, 36, 222);
+}
+
+.theme-link::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    opacity: 0;
+    transition: all ease-in-out .3s;
+
+}
+
+.theme-link:hover::after{
+    opacity: 1;
+}
+
+
+

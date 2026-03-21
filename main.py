@@ -6,7 +6,7 @@ from views import home
 from api import weather_api
 
 
-api =fastapi.FastAPI()
+api = fastapi.FastAPI()
 
 
 def configure():

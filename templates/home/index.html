@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,18 @@
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- BOOTSTRAP CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- CSS PARTIALS -->
     <link rel="stylesheet" href="/static/css/partials/base.css">
@@ -20,18 +29,24 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="/static/css/main.css">
 </head>
+
 <body>
     <div class="site-wrapper">
         <header class="header"></header><!-- /.header -->
         <main class="main-content">
             <section class="main_hero_section section-space">
                 <figure class="hero-background">
-                    <img src="/static/img/main_hero.jpg" alt="SKYCAST Weather Service">
+                    <video autoplay muted loop playsinline class="hero-video">
+                        <source src="https://res.cloudinary.com/dqhzrovwe/video/upload/v1774125849/main_hero_p8ueui.mp4"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <figcaption>
                         <div class="container container-md">
                             <div class="figcaption-inner hero-content">
-                                <h1><b>SKYCAST Service</b> A RESTful weather service</h1>
-                                <a href="#get_started">GET STARTED</a>
+                                <h1 class="pb-5 main-hero-heading">SKYCAST SERVICE<span class="para">A RESTFUL WEATHER
+                                        SERVICE</span></h1>
+                                <a href="#get_started" class="theme-button main_theme_button">GET STARTED</a>
                             </div><!-- /.figcaption-inner -->
                         </div>
                     </figcaption>
@@ -39,28 +54,44 @@
             </section><!-- /.main_hero_section -->
             <section class="get_started" id="get_started">
                 <div class="container">
-                <h5>Endpoints</h5>
-                <ul>
-                    <li>
-                        sfda
-                    </li>
-                    <li>
-                        sfda
-                    </li>
-                </ul>
-                <a href="/api/weather">GET /api/weather/?city={city}&country={country}</a>
-                <!-- /.container --></div>
+                    <div class="section-inner">
+                        <h2 class="section_heading" data-aos="zoom-in" data-aos-duration="1500">ENDPOINTS</h2>
+                        <h4 class="pb-3" data-aos="fade-right" data-aos-duration="1500">Current weather in a city</h4>
+                        <h5 class="api_link pb-5">
+                            <a href="/api/weather" id="api_link" class="theme-link" data-aos="fade-left"
+                                data-aos-duration="3000">
+                                GET /api/weather/?city={city}&country={country}&state={state}
+                            </a>
+                        </h5>
+                        <h4 class="pb-3" data-aos="fade-right" data-aos-duration="1500">Parameters</h4>
+                        <ul class="parameters-list pb-5 theme-li">
+                            <li data-aos="fade-right" data-aos-duration="1500">Required: city={city}<span class="font-light"> - the city you want to get the weather at .</span></li>
+                            <li data-aos="fade-right" data-aos-duration="1500"><span class="font-light">Optional:</span> state={state}<span class="font-light"> - the city you want to get the weather at .</span></li>
+                            <li data-aos="fade-right" data-aos-duration="1500"><span class="font-light">Optional:</span> country={country}<span class="font-light"> - the city you want to get the weather at .</span></li>
+                            <li data-aos="fade-right" data-aos-duration="1500"><span class="font-light">Optional:</span> units={units}<span class="font-light"> - the city you want to get the weather at .</span></li>
+                        </ul>
+                        <h4 class="pb-3" data-aos="fade-right" data-aos-duration="1500">Response JSON</h4>
+                        <ul class="theme-li">
+                            <li data-aos="fade-right" data-aos-duration="1500"><span class="font-light">Click <a href="#api_link" class="theme-link">the link above</a> to see example output .</span></li>
+                        </ul>
+                    </div><!-- /.section-inner -->
+                    <!-- /.container -->
+                </div>
             </section><!-- /.get_started -->
         </main><!-- /.main-content -->
         <footer class="footer"></footer><!-- /.footer -->
     </div><!-- /.site-wrapper -->
 
     <!-- BOOTSTRAP JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- MAIN JS -->
     <script src="/static/js/app.js"></script>
 </body>
+
 </html>
-
-
