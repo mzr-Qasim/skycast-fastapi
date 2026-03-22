@@ -31,7 +31,7 @@ section.main_hero_section figure figcaption{
 
 
 .main-hero-heading {
-    font-size: clamp(2.8rem, 4vw, 8rem);
+    font-size: clamp(3.5rem, 4vw, 8rem);
     font-weight: bold;
     padding-bottom: 2rem;
     color: white;
@@ -46,7 +46,7 @@ section.main_hero_section figure figcaption{
 .main-hero-heading span.para {
         padding-top: 1rem;
         display: block;
-        font-size: 60%;
+        font-size: 65%;
         font-weight: lighter;
 
 }
@@ -71,6 +71,56 @@ section.main_hero_section figure::after{
 /* Section Get started */
 
 section.get_started{
-    height: 1700px;
     color: white;
 }
+
+/* Section Footer */
+
+footer.footer{
+    border-top: 1px solid rgb(70, 36, 222);
+    box-shadow: 0 -1px 10px rgba(168,85,247,0.2);
+}
+
+.footer-inner{
+    padding: 1rem 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-inner p{
+    color: #888;
+}
+.footer-inner ul{
+    display: flex;
+}
+
+.footer-inner ul li{
+    position: relative;
+    padding-left: 1.5rem;
+}
+.footer-inner ul li:not(:last-child){
+    margin-right: 5rem;
+}
+.footer-inner ul li::before{
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: rgb(70, 36, 222);
+    transform: translateY(-50%);
+}
+
+.footer-inner ul li a{
+    color: #e5e5e5; /* brighter than p */
+    transition: all ease-in-out .3s;
+}
+
+.footer-inner ul li a:hover{
+    color: rgb(107, 11, 251);
+}
+

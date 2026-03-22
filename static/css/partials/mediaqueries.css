@@ -1,0 +1,15 @@
+@media(max-width: 992px){
+    .footer-inner{
+        gap: 1rem;
+        flex-direction: column;
+        align-items: flex-start!important;
+    }
+}
+@media(max-width: 768px){
+    .footer-inner ul{
+        flex-direction: column;
+    }
+    .footer-inner ul li:not(:last-child){
+        margin-bottom: 1rem;
+    }
+}

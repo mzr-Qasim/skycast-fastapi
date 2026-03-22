@@ -52,34 +52,56 @@
                     </figcaption>
                 </figure>
             </section><!-- /.main_hero_section -->
-            <section class="get_started" id="get_started">
+            <section class="get_started section-space" id="get_started">
                 <div class="container">
                     <div class="section-inner">
-                        <h2 class="section_heading" data-aos="zoom-in" data-aos-duration="1500">ENDPOINTS</h2>
-                        <h4 class="pb-3" data-aos="fade-right" data-aos-duration="1500">Current weather in a city</h4>
+                        <h2 class="section_heading" data-aos="flip-right" data-aos-duration="1500">ENDPOINTS</h2>
+                        <h4 class="pb-3" data-aos="zoom-in" data-aos-duration="1500">API link</h4>
                         <h5 class="api_link pb-5">
-                            <a href="/api/weather/portland?state=OR&country=US&units=imperial" id="api_link" class="theme-link" data-aos="fade-left"
-                                data-aos-duration="3000">
+                            <div class="theme-link-inner" data-aos="fade-left" data-aos-duration="3000">
+                                <a href="/api/weather/portland?state=OR&country=US&units=imperial" id="api_link"
+                                class="theme-link">
                                 GET /api/weather/?city={city}&country={country}&state={state}
-                            </a>
+                            </a>       
+                            </div><!-- /.theme-link-inner -->
                         </h5>
-                        <h4 class="pb-3" data-aos="fade-right" data-aos-duration="1500">Parameters</h4>
+                        <h4 class="pb-3" data-aos="zoom-in" data-aos-duration="1500">Parameters</h4>
                         <ul class="parameters-list pb-5 theme-li">
-                            <li data-aos="fade-right" data-aos-duration="1500">Required: city={city}<span class="font-light"> - the city you want to get the weather at .</span></li>
-                            <li data-aos="fade-right" data-aos-duration="1500"><span class="font-light">Optional:</span> state={state}<span class="font-light"> - the city you want to get the weather at .</span></li>
-                            <li data-aos="fade-right" data-aos-duration="1500"><span class="font-light">Optional:</span> country={country}<span class="font-light"> - the city you want to get the weather at .</span></li>
-                            <li data-aos="fade-right" data-aos-duration="1500"><span class="font-light">Optional:</span> units={units}<span class="font-light"> - the city you want to get the weather at .</span></li>
+                            <li data-aos="fade-right" data-aos-duration="1500">Required: city={city}<span
+                                    class="font-light"> - the city you want to get the weather at .</span></li>
+                            <li data-aos="fade-right" data-aos-duration="1500"><span class="font-light">Optional:</span>
+                                state={state}<span class="font-light"> - the city you want to get the weather at
+                                    .</span></li>
+                            <li data-aos="fade-right" data-aos-duration="1500"><span class="font-light">Optional:</span>
+                                country={country}<span class="font-light"> - the city you want to get the weather at
+                                    .</span></li>
+                            <li data-aos="fade-right" data-aos-duration="1500"><span class="font-light">Optional:</span>
+                                units={units}<span class="font-light"> - the city you want to get the weather at
+                                    .</span></li>
                         </ul>
-                        <h4 class="pb-3" data-aos="fade-right" data-aos-duration="1500">Response JSON</h4>
+                        <h4 class="pb-3" data-aos="zoom-in" data-aos-duration="1500">Response JSON</h4>
                         <ul class="theme-li">
-                            <li data-aos="fade-right" data-aos-duration="1500"><span class="font-light">Click <a href="#api_link" class="theme-link">the link above</a> to see example output .</span></li>
+                            <li data-aos="fade-right" data-aos-duration="1500"><span class="font-light">Click <a
+                                        href="#api_link"><b class="theme-color">the link above</b></a> to see example output
+                                    .</span></li>
                         </ul>
                     </div><!-- /.section-inner -->
                     <!-- /.container -->
                 </div>
             </section><!-- /.get_started -->
         </main><!-- /.main-content -->
-        <footer class="footer"></footer><!-- /.footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-inner">
+                    <p>© 2026 SKYCAST API | Built by Malik Qasim</p>
+                    <ul>
+                        <li><a href="/docs"><span class="fw-medium">API Docs</span></a></li>
+                        <li><a href="https://github.com/yourusername" target="_blank"><span class="fw-medium">GitHub</span></a></li>
+                        <li><a href="https://malikqasim.info" target="_blank"><span class="fw-medium">Portfolio</span></a></li>
+                    </ul>
+                </div><!-- /.footer-inner -->
+            </div><!-- /.container -->
+        </footer><!-- /.footer -->
     </div><!-- /.site-wrapper -->
 
     <!-- BOOTSTRAP JS -->
