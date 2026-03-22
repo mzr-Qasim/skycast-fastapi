@@ -1,7 +1,9 @@
 import fastapi
+from pathlib import Path
+import json
 from starlette.staticfiles import StaticFiles
 import uvicorn
-
+from services import openweather_service
 from views import home
 from api import weather_api
 
@@ -11,6 +13,19 @@ api = fastapi.FastAPI()
 
 def configure():
     configure_routing()
+    configure_api_keys()
+    
+
+def configure_api_keys():
+    file = Path('settings.json').absolute()
+    if not file.exists():
+        print (f"Warning: file {file} does not exis, you cannot continue without it.")
+        raise Exception("Settings.json file not found, you cannot continue without it.")
+    
+    with open('settings.json') as file:
+        settings = json.load(file)
+        openweather_service.api_key = settings.get('api_key')
+
 
 
 def configure_routing():
