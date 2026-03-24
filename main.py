@@ -19,8 +19,8 @@ def configure():
 def configure_api_keys():
     file = Path('settings.json').absolute()
     if not file.exists():
-        print (f"Warning: file {file} does not exis, you cannot continue without it.")
-        raise Exception("Settings.json file not found, you cannot continue without it.")
+        print (f"Warning: file {file} does not exist, you cannot continue without it.")
+        raise Exception("settings.json file not found, you cannot continue without it.")
     
     with open('settings.json') as file:
         settings = json.load(file)
