@@ -1,9 +1,16 @@
 from typing import Optional
 import httpx
+from infrastructure import weather_cache
 
 api_key: Optional [str] = None
 
 async def get_report_async(city: str, state: Optional[str], country : str, units: str) -> dict:
+
+    if forecast := weather_cache.get_weather(city, state, country, units):
+        return forecast
+
+
+
     if state:
         q = f'{city}, {state}, {country}'
     else:
@@ -16,5 +23,9 @@ async def get_report_async(city: str, state: Optional[str], country : str, units
 
 
     data = resp.json()
-    forcast = data['main']
-    return forcast
+    forecast = data['main']
+
+
+    weather_cache.set_weather(city, state, country, units, forecast)
+
+    return forecast
