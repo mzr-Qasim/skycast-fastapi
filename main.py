@@ -6,9 +6,20 @@ import uvicorn
 from services import openweather_service
 from views import home
 from api import weather_api
+# from fastapi.middleware.cors import CORSMiddleware
 
 
 api = fastapi.FastAPI()
+
+
+# api.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["*"],  # <- You can replace "*" with specific origins for production
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
+
 
 
 def configure():

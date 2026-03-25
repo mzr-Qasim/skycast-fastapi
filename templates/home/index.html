@@ -89,6 +89,18 @@
                     <!-- /.container -->
                 </div>
             </section><!-- /.get_started -->
+            {% if events %}
+            <section class="reports section-space">
+                <div class="container">
+                <h2>Recent Weather Events</h2>
+                <ul>
+                    {% for e in events %}
+                    <li>{{ e.location.city }}, {{ e.location.country }}: {{ e.description }}</li>
+                    {% endfor %}
+                </ul>
+                </div><!-- /.container -->
+            </section><!-- /.reports -->
+            {% endif %}
         </main><!-- /.main-content -->
         <footer class="footer">
             <div class="container">
