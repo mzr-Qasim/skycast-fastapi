@@ -36,8 +36,7 @@ async def get_report_async(city: str, state: Optional[str], country : str, units
 
 
 def validate_units(
-    city: str, state: Optional[str], country: Optional[str], units: str
-) -> Tuple[str, Optional[str], str, str]:
+    city: str, state: Optional[str], country: Optional[str], units: str) -> Tuple[str, Optional[str], str, str]:
     city = city.lower().strip()
     if not country:
         country = 'us'
