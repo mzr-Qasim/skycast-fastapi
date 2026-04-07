@@ -1,11 +1,13 @@
 import fastapi
-from pathlib import Path
-import json
+# from pathlib import Path
+# import json
+from dotenv import load_dotenv
 from starlette.staticfiles import StaticFiles
 import uvicorn
 from services import openweather_service
 from views import home
 from api import weather_api
+import os
 # from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -26,16 +28,16 @@ def configure():
     configure_routing()
     configure_api_keys()
     
+load_dotenv()
+print("OPENWEATHER_API_KEY:", os.getenv("OPENWEATHER_API_KEY"))
 
 def configure_api_keys():
-    file = Path('settings.json').absolute()
-    if not file.exists():
-        print (f"Warning: file {file} does not exist, you cannot continue without it.")
-        raise Exception("settings.json file not found, you cannot continue without it.")
-    
-    with open('settings.json') as file:
-        settings = json.load(file)
-        openweather_service.api_key = settings.get('api_key')
+    api_key = os.getenv("OPENWEATHER_API_KEY")
+
+    if not api_key:
+        raise Exception("API key not found. Set OPENWEATHER_API_KEY environment variable.")
+
+    openweather_service.api_key = api_key
 
 
 
