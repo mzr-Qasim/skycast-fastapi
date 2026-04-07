@@ -1,6 +1,4 @@
 import fastapi
-# from pathlib import Path
-# import json
 from dotenv import load_dotenv
 from starlette.staticfiles import StaticFiles
 import uvicorn
@@ -28,8 +26,8 @@ def configure():
     configure_routing()
     configure_api_keys()
     
-load_dotenv()
-print("OPENWEATHER_API_KEY:", os.getenv("OPENWEATHER_API_KEY"))
+# load_dotenv()
+
 
 def configure_api_keys():
     api_key = os.getenv("OPENWEATHER_API_KEY")
